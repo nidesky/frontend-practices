@@ -1,0 +1,23 @@
+{
+  "name": "umovie",
+  "version": "0.0.1",
+  "description": "omac movie",
+  "keywords": [
+    "umovie"
+  ],
+  "authors": [
+    "omac"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

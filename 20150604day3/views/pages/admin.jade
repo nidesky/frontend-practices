@@ -4,26 +4,27 @@ block content
 	.container
 		.row
 			form.form-horizontal(method="post", action="/admin/movie/new")
+				input(type="hidden", name="movie[_id]", value="#{movie._id}")
 				.form-group
 					label.col-sm-2.control-label(for="inputTitle") 电影名字
 					.col-sm-10
-						input#inputTitle.form-control(type="text", name="movie[title]")
+						input#inputTitle.form-control(type="text", name="movie[title]" value="#{movie.title}")
 				.form-group
 					label.col-sm-2.control-label(for="inputDoctor") 导演
 					.col-sm-10
-						input#inputDoctor.form-control(type="text", name="movie[doctor]")
+						input#inputDoctor.form-control(type="text", name="movie[doctor]" value="#{movie.doctor}")
 				.form-group
 					label.col-sm-2.control-label(for="inputYear") 年份
 					.col-sm-10
-						input#inputYear.form-control(type="text", name="movie[year]")
+						input#inputYear.form-control(type="text", name="movie[year]" value="#{movie.year}")
 				.form-group
 					label.col-sm-2.control-label(for="inputPoster") 海报
 					.col-sm-10
-						input#inputPoster.form-control(type="text", name="movie[poster]")
+						input#inputPoster.form-control(type="text", name="movie[poster]" value="#{movie.poster}")
 				.form-group
 					label.col-sm-2.control-label(for="inputSummary") 简介
 					.col-sm-10
-						input#inputSummary.form-control(type="textarea", name="movie[summary]")
+						input#inputSummary.form-control(type="textarea", name="movie[summary]" value="#{movie.summary}")
 				.form-group
 					label.col-sm-2.control-label(for="inputSummary")  
 					.col-sm-10

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is a demo page</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="todc-bootstrap.min.css">
+    <link rel="stylesheet" href="perfect-scrollbar.min.css"/>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="productCate.js"></script>
+    <script src="perfect-scrollbar.jquery.js"></script>
+
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .row {
+            position: relative;
+        }
+
+        .level-1th {
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 90px;
+            border-radius: 0px;
+        }
+
+        .sub-container {
+            position: absolute;
+            padding: 20px;
+            top: 0px;
+            width: 0px;
+            height: 391px;
+            transition: width 0s;
+            background-color: #ffffff;
+            z-index: 2;
+        }
+
+        .sub-container.on {
+            width: 700px;
+            border: 1px solid #e5e5e5;
+            border-left: none;
+            transition: width .4s ease;
+        }
+
+        .sub-menus dl {
+            display: none;
+        }
+
+        .sub-menus dl dt {
+            padding-bottom: 3px;
+            color: #e47911;
+            font-size: 14px;
+            font-weight: 800;
+            font-family: 'Microsoft YaHei';
+            border-bottom: 1px solid #000000;
+        }
+
+        .sub-menus dl dd {
+            padding: 5px 0px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            border-bottom: 1px dashed #999999;
+        }
+
+        .sub-menus dl dd:last-child {
+            border-bottom: none;
+        }
+
+        .sub-menus dl dd .level-3th {
+            margin: 5px 0px;
+            padding: 0 5px;
+            border-right: 1px solid #EFE6E6;
+            line-height: 12px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .sub-menus dl dd .level-3th:hover {
+            color: #e47911;
+            text-decoration: none;
+        }
+
+        .haha {
+            width: 400px;
+            height: 400px;
+            border: 1px dashed #28a1c5;
+        }
+
+        .lf-label {
+            margin-right: 5px;
+            margin-bottom: 3px;
+            line-height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="list-group level-1th">
+            </div>
+            <div class="sub-container">
+                <div class="sub-menus">
+                    <dl data-index="1">
+                        <dt>制造加工机械</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">农业机械</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            食品机械</a><a href="www.baidu.com" class="level-3th">
+                            饮料机械</a><a href="www.baidu.com" class="level-3th">
+                            制版与印刷机械</a><a href="www.baidu.com" class="level-3th">
+                            包装机械</a><a href="www.baidu.com" class="level-3th">
+                            纺织机械</a><a href="www.baidu.com" class="level-3th">
+                            建筑工程机械</a><a href="www.baidu.com" class="level-3th">
+                            橡塑加工机械</a><a href="www.baidu.com" class="level-3th">
+                            破碎机械</a><a href="www.baidu.com" class="level-3th">
+                            分选机械</a><a href="www.baidu.com" class="level-3th">
+                            雕刻机械</a><a href="www.baidu.com" class="level-3th">
+                            纸加工机械</a><a href="www.baidu.com" class="level-3th">
+                            金属加工机械</a><a href="www.baidu.com" class="level-3th">
+                            玻璃陶瓷加工机械</a><a href="www.baidu.com" class="level-3th">
+                            木工机械</a><a href="www.baidu.com" class="level-3th">
+                            制药机械</a><a href="www.baidu.com" class="level-3th">
+                            模具加工机械</a><a href="www.baidu.com" class="level-3th">
+                            电子电气产品制造机械</a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>工业设备</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">泵</a><a href="www.baidu.com"
+                                                                              class="level-3th">
+                            阀门</a><a href="www.baidu.com" class="level-3th">
+                            压缩设备</a><a href="www.baidu.com" class="level-3th">
+                            输送设备</a><a href="www.baidu.com" class="level-3th">
+                            发电设备</a><a href="www.baidu.com" class="level-3th">
+                            清洗设备</a><a href="www.baidu.com" class="level-3th">
+                            空气净化设备</a><a href="www.baidu.com" class="level-3th">
+                            污水处理设备</a><a href="www.baidu.com" class="level-3th">
+                            原水处理设备</a><a href="www.baidu.com" class="level-3th">
+                            矿产设备</a><a href="www.baidu.com" class="level-3th">
+                            冶金设备</a><a href="www.baidu.com" class="level-3th">
+                            石油设备</a><a href="www.baidu.com" class="level-3th">
+                            锅炉</a><a href="www.baidu.com" class="level-3th">
+                            熔炉</a><a href="www.baidu.com" class="level-3th">
+                            通风设备</a><a href="www.baidu.com" class="level-3th">
+                            传热换热设备</a><a href="www.baidu.com" class="level-3th">
+                            焊接设备</a><a href="www.baidu.com" class="level-3th">
+                            切割设备</a><a href="www.baidu.com" class="level-3th">
+                            过滤设备</a><a href="www.baidu.com" class="level-3th">
+                            喷涂设备</a><a href="www.baidu.com" class="level-3th">
+                            混合设备</a><a href="www.baidu.com" class="level-3th">
+                            固液分离设备</a><a href="www.baidu.com" class="level-3th">
+                            干燥设备</a><a href="www.baidu.com" class="level-3th">
+                            起重设备</a><a href="www.baidu.com" class="level-3th">
+                            非标准专业设备
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>五金工具</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">手动工具</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            气动工具</a><a href="www.baidu.com" class="level-3th">
+                            电动工具</a><a href="www.baidu.com" class="level-3th">
+                            磨具</a><a href="www.baidu.com" class="level-3th">
+                            磨料</a><a href="www.baidu.com" class="level-3th">
+                            标准件</a><a href="www.baidu.com" class="level-3th">
+                            索具</a><a href="www.baidu.com" class="level-3th">
+                            弹簧</a><a href="www.baidu.com" class="level-3th">
+                            气动元件</a><a href="www.baidu.com" class="level-3th">
+                            传动部件</a><a href="www.baidu.com" class="level-3th">
+                            紧固件和连接件</a><a href="www.baidu.com" class="level-3th">
+                            刀具</a><a href="www.baidu.com" class="level-3th">
+                            焊接、切割材料</a><a href="www.baidu.com" class="level-3th">
+                            滤材滤芯
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>仪器仪表</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">气体仪表</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            液体仪表</a><a href="www.baidu.com" class="level-3th">
+                            温度仪表</a><a href="www.baidu.com" class="level-3th">
+                            湿度仪表</a><a href="www.baidu.com" class="level-3th">
+                            量具量仪</a><a href="www.baidu.com" class="level-3th">
+                            计量标准器具</a><a href="www.baidu.com" class="level-3th">
+                            机械量仪表</a><a href="www.baidu.com" class="level-3th">
+                            实验室器具</a><a href="www.baidu.com" class="level-3th">
+                            光学透镜和仪器</a><a href="www.baidu.com" class="level-3th">
+                            分析仪器</a><a href="www.baidu.com" class="level-3th">
+                            探测仪器</a><a href="www.baidu.com" class="level-3th">
+                            试验机、试验箱</a><a href="www.baidu.com" class="level-3th">
+                            专用仪器仪表</a><a href="www.baidu.com" class="level-3th">
+                            生物科学仪器</a><a href="www.baidu.com" class="level-3th">
+                            电工仪器仪表</a><a href="www.baidu.com" class="level-3th">
+                            衡器、计时器</a><a href="www.baidu.com" class="level-3th">
+                            无损检测仪器
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>电工电气</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">电池、蓄电池</a><a href="www.baidu.com"
+                                                                                   class="level-3th">
+                            充电器</a><a href="www.baidu.com" class="level-3th">
+                            电线、电缆</a><a href="www.baidu.com" class="level-3th">
+                            信号线、天线</a><a href="www.baidu.com" class="level-3th">
+                            电气控制器</a><a href="www.baidu.com" class="level-3th">
+                            电热器</a><a href="www.baidu.com" class="level-3th">
+                            绝缘材料</a><a href="www.baidu.com" class="level-3th">
+                            电动机</a><a href="www.baidu.com" class="level-3th">
+                            光纤、光缆</a><a href="www.baidu.com" class="level-3th">
+                            插头、插座</a><a href="www.baidu.com" class="level-3th">
+                            输变电和配电设备</a><a href="www.baidu.com" class="level-3th">
+                            开关</a><a href="www.baidu.com" class="level-3th">
+                            通信和广播电视设备</a><a href="www.baidu.com" class="level-3th">
+                            专用电气设备
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>电子元器件</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">电容器</a><a href="www.baidu.com"
+                                                                                class="level-3th">
+                            电路板</a><a href="www.baidu.com" class="level-3th">
+                            连接器</a><a href="www.baidu.com" class="level-3th">
+                            接触器</a><a href="www.baidu.com" class="level-3th">
+                            二极管</a><a href="www.baidu.com" class="level-3th">
+                            显示器件</a><a href="www.baidu.com" class="level-3th">
+                            电磁和保险元器件</a><a href="www.baidu.com" class="level-3th">
+                            集成电路 IC</a><a href="www.baidu.com" class="level-3th">
+                            频率和电感元件</a><a href="www.baidu.com" class="level-3th">
+                            光电器件</a><a href="www.baidu.com" class="level-3th">
+                            电声元器件</a><a href="www.baidu.com" class="level-3th">
+                            继电器</a><a href="www.baidu.com" class="level-3th">
+                            变送器</a><a href="www.baidu.com" class="level-3th">
+                            电阻</a><a href="www.baidu.com" class="level-3th">
+                            传感器</a><a href="www.baidu.com" class="level-3th">
+                            遥控</a><a href="www.baidu.com" class="level-3th">
+                            磁卡</a><a href="www.baidu.com" class="level-3th">
+                            智能卡</a><a href="www.baidu.com" class="level-3th">
+                            其他电子元件
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>安全和防护</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">电子报警安全装置</a><a
+                                href="www.baidu.com" class="level-3th">
+                            防静电产品</a><a href="www.baidu.com" class="level-3th">
+                            消防、救生器材</a><a href="www.baidu.com" class="level-3th">
+                            锁具</a><a href="www.baidu.com" class="level-3th">
+                            安全和防护用品</a><a href="www.baidu.com" class="level-3th">
+                            作业防护产品</a><a href="www.baidu.com" class="level-3th">
+                            劳动保护用品</a><a href="www.baidu.com" class="level-3th">
+                            监控保护装置</a><a href="www.baidu.com" class="level-3th">
+                            门禁考勤系统</a><a href="www.baidu.com" class="level-3th">
+                            其他安全防护设施
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>照明</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">灯泡灯管</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            室内照明灯具</a><a href="www.baidu.com" class="level-3th">
+                            LED灯</a><a href="www.baidu.com" class="level-3th">
+                            灯饰</a><a href="www.baidu.com" class="level-3th">
+                            照明配件</a><a href="www.baidu.com" class="level-3th">
+                            室外照明灯具</a><a href="www.baidu.com" class="level-3th">
+                            专门用途灯具</a><a href="www.baidu.com" class="level-3th">
+                            舞台灯</a><a href="www.baidu.com" class="level-3th">
+                            其他灯具
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>交通运输</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">车辆</a><a href="www.baidu.com"
+                                                                               class="level-3th">
+                            储运器具</a><a href="www.baidu.com" class="level-3th">
+                            装载设备</a><a href="www.baidu.com" class="level-3th">
+                            电梯</a><a href="www.baidu.com" class="level-3th">
+                            电动车</a><a href="www.baidu.com" class="level-3th">
+                            交通辅助设施</a><a href="www.baidu.com" class="level-3th">
+                            港口辅助设施</a><a href="www.baidu.com" class="level-3th">
+                            机场辅助设施</a><a href="www.baidu.com" class="level-3th">
+                            船舶</a><a href="www.baidu.com" class="level-3th">
+                            船用器材与设施</a><a href="www.baidu.com" class="level-3th">
+                            特种车辆</a><a href="www.baidu.com" class="level-3th">
+                            航天器材与设施</a><a href="www.baidu.com" class="level-3th">
+                            机车器材与设施
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>汽摩配件</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">汽摩发动机系统</a><a
+                                href="www.baidu.com" class="level-3th">
+                            汽车横向件</a><a href="www.baidu.com" class="level-3th">
+                            汽摩检修设备及工具</a><a href="www.baidu.com" class="level-3th">
+                            汽车内室部件</a><a href="www.baidu.com" class="level-3th">
+                            汽车改装部件</a><a href="www.baidu.com" class="level-3th">
+                            汽车外体部件</a><a href="www.baidu.com" class="level-3th">
+                            车载影音娱乐用品</a><a href="www.baidu.com" class="level-3th">
+                            汽车装饰及保养</a><a href="www.baidu.com" class="level-3th">
+                            汽车电子部件</a><a href="www.baidu.com" class="level-3th">
+                            摩托车部件和附件</a><a href="www.baidu.com" class="level-3th">
+                            非机动车配件</a><a href="www.baidu.com" class="level-3th">
+                            汽摩传动系统</a><a href="www.baidu.com" class="level-3th">
+                            汽摩驱动系统</a><a href="www.baidu.com" class="level-3th">
+                            汽摩制动系统</a><a href="www.baidu.com" class="level-3th">
+                            汽摩转向系统
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                    <dl data-index="2">
+                        <dt>建筑和装饰材料</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">厨卫设施</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            瓷砖</a><a href="www.baidu.com" class="level-3th">
+                            文化砖</a><a href="www.baidu.com" class="level-3th">
+                            玻璃</a><a href="www.baidu.com" class="level-3th">
+                            建筑供暖设施</a><a href="www.baidu.com" class="level-3th">
+                            砂、石、砖、水泥</a><a href="www.baidu.com" class="level-3th">
+                            功能材料</a><a href="www.baidu.com" class="level-3th">
+                            木料</a><a href="www.baidu.com" class="level-3th">
+                            有机板材</a><a href="www.baidu.com" class="level-3th">
+                            无机板材</a><a href="www.baidu.com" class="level-3th">
+                            轻钢龙骨</a><a href="www.baidu.com" class="level-3th">
+                            铝塑型材</a><a href="www.baidu.com" class="level-3th">
+                            吊顶</a><a href="www.baidu.com" class="level-3th">
+                            管材</a><a href="www.baidu.com" class="level-3th">
+                            油漆、涂料、粘合剂</a><a href="www.baidu.com" class="level-3th">
+                            庭院设施</a><a href="www.baidu.com" class="level-3th">
+                            丝网、护栏</a><a href="www.baidu.com" class="level-3th">
+                            门</a><a href="www.baidu.com" class="level-3th">
+                            窗</a><a href="www.baidu.com" class="level-3th">
+                            门窗五金</a><a href="www.baidu.com" class="level-3th">
+                            地板</a><a href="www.baidu.com" class="level-3th">
+                            其他建筑装饰材料
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>冶金、矿产和能源</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">合金</a><a href="www.baidu.com"
+                                                                               class="level-3th">
+                            有色金属材料</a><a href="www.baidu.com" class="level-3th">
+                            黑金属、贵金属</a><a href="www.baidu.com" class="level-3th">
+                            不锈钢材</a><a href="www.baidu.com" class="level-3th">
+                            钢材</a><a href="www.baidu.com" class="level-3th">
+                            优特钢</a><a href="www.baidu.com" class="level-3th">
+                            冶金矿产</a><a href="www.baidu.com" class="level-3th">
+                            非金属矿产</a><a href="www.baidu.com" class="level-3th">
+                            核能源矿产</a><a href="www.baidu.com" class="level-3th">
+                            煤炭</a><a href="www.baidu.com" class="level-3th">
+                            石油
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>化工产品</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">添加剂及化学助剂</a><a
+                                href="www.baidu.com" class="level-3th">
+                            胶粘剂</a><a href="www.baidu.com" class="level-3th">
+                            农药、化肥</a><a href="www.baidu.com" class="level-3th">
+                            生物化学</a><a href="www.baidu.com" class="level-3th">
+                            化学试剂</a><a href="www.baidu.com" class="level-3th">
+                            干燥剂和吸咐剂</a><a href="www.baidu.com" class="level-3th">
+                            无机化工</a><a href="www.baidu.com" class="level-3th">
+                            有机化工</a><a href="www.baidu.com" class="level-3th">
+                            沥青</a><a href="www.baidu.com" class="level-3th">
+                            塑料</a><a href="www.baidu.com" class="level-3th">
+                            颜料和染料</a><a href="www.baidu.com" class="level-3th">
+                            天然橡胶</a><a href="www.baidu.com" class="level-3th">
+                            合成橡胶</a><a href="www.baidu.com" class="level-3th">
+                            润滑剂</a><a href="www.baidu.com" class="level-3th">
+                            树脂</a><a href="www.baidu.com" class="level-3th">
+                            表面活性剂</a><a href="www.baidu.com" class="level-3th">
+                            新型化工材料
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>纺织</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">工业用纺丝</a><a href="www.baidu.com"
+                                                                                  class="level-3th">
+                            民用纺丝</a><a href="www.baidu.com" class="level-3th">
+                            工业用纤维</a><a href="www.baidu.com" class="level-3th">
+                            民用纤维</a><a href="www.baidu.com" class="level-3th">
+                            功能性面料</a><a href="www.baidu.com" class="level-3th">
+                            棉类面料</a><a href="www.baidu.com" class="level-3th">
+                            麻类面料</a><a href="www.baidu.com" class="level-3th">
+                            化纤面料</a><a href="www.baidu.com" class="level-3th">
+                            印染织面料</a><a href="www.baidu.com" class="level-3th">
+                            丝绸面料</a><a href="www.baidu.com" class="level-3th">
+                            皮革和人造革</a><a href="www.baidu.com" class="level-3th">
+                            无纺布</a><a href="www.baidu.com" class="level-3th">
+                            加工辅料</a><a href="www.baidu.com" class="level-3th">
+                            纱线</a><a href="www.baidu.com" class="level-3th">
+                            箱包配件</a><a href="www.baidu.com" class="level-3th">
+                            纺织辅料
+
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                    <dl data-index="3">
+                        <dt>医疗保健</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">诊断设备</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            治疗设备</a><a href="www.baidu.com" class="level-3th">
+                            辅助设备</a><a href="www.baidu.com" class="level-3th">
+                            病房器材</a><a href="www.baidu.com" class="level-3th">
+                            手术器材</a><a href="www.baidu.com" class="level-3th">
+                            植入器材</a><a href="www.baidu.com" class="level-3th">
+                            医用材料</a><a href="www.baidu.com" class="level-3th">
+                            康复器材</a><a href="www.baidu.com" class="level-3th">
+                            保健用品</a><a href="www.baidu.com" class="level-3th">
+                            西成药品</a><a href="www.baidu.com" class="level-3th">
+                            中成药品</a><a href="www.baidu.com" class="level-3th">
+                            外用药品</a><a href="www.baidu.com" class="level-3th">
+                            保健药品
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                    <dl data-index="4">
+                        <dt>农产品</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">禾谷类</a><a href="www.baidu.com"
+                                                                                class="level-3th">
+                            薯类</a><a href="www.baidu.com" class="level-3th">
+                            豆菽类</a><a href="www.baidu.com" class="level-3th">
+                            细粮</a><a href="www.baidu.com" class="level-3th">
+                            叶菜类</a><a href="www.baidu.com" class="level-3th">
+                            根茎类</a><a href="www.baidu.com" class="level-3th">
+                            芽苗菜</a><a href="www.baidu.com" class="level-3th">
+                            果菜类</a><a href="www.baidu.com" class="level-3th">
+                            菌 类</a><a href="www.baidu.com" class="level-3th">
+                            浆果类</a><a href="www.baidu.com" class="level-3th">
+                            柑橘类</a><a href="www.baidu.com" class="level-3th">
+                            核果类</a><a href="www.baidu.com" class="level-3th">
+                            仁果类</a><a href="www.baidu.com" class="level-3th">
+                            瓜类</a><a href="www.baidu.com" class="level-3th">
+                            其他</a><a href="www.baidu.com" class="level-3th">
+                            活牲畜、家禽</a><a href="www.baidu.com" class="level-3th">
+                            水产</a><a href="www.baidu.com" class="level-3th">
+                            干鲜</a><a href="www.baidu.com" class="level-3th">
+                            肉类</a><a href="www.baidu.com" class="level-3th">
+                            蛋类</a><a href="www.baidu.com" class="level-3th">
+                            茶叶</a><a href="www.baidu.com" class="level-3th">
+                            烟草</a><a href="www.baidu.com" class="level-3th">
+                            种子种苗
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                    <dl data-index="5">
+                        <dt>健身娱乐</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">野营户外用品</a><a href="www.baidu.com"
+                                                                                   class="level-3th">
+                            烧烤用具</a><a href="www.baidu.com" class="level-3th">
+                            垂钓用具</a><a href="www.baidu.com" class="level-3th">
+                            户外健身器材</a><a href="www.baidu.com" class="level-3th">
+                            室内健身器材</a><a href="www.baidu.com" class="level-3th">
+                            运动装备</a><a href="www.baidu.com" class="level-3th">
+                            游乐场设施</a><a href="www.baidu.com" class="level-3th">
+                            棋牌</a><a href="www.baidu.com" class="level-3th">
+                            乐器</a><a href="www.baidu.com" class="level-3th">
+                            舞蹈用品</a><a href="www.baidu.com" class="level-3th">
+                            水上运动用品</a><a href="www.baidu.com" class="level-3th">
+                            滑行运动用品</a><a href="www.baidu.com" class="level-3th">
+                            球类体育用品</a><a href="www.baidu.com" class="level-3th">
+                            田径、体操用品</a><a href="www.baidu.com" class="level-3th">
+                            高尔夫用品</a><a href="www.baidu.com" class="level-3th">
+                            体育运动配套产品
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                    <dl data-index="6">
+                        <dt>服装服饰</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">手套</a><a href="www.baidu.com"
+                                                                               class="level-3th">
+                            围巾</a><a href="www.baidu.com" class="level-3th">
+                            腰带</a><a href="www.baidu.com" class="level-3th">
+                            帽类</a><a href="www.baidu.com" class="level-3th">
+                            裤装</a><a href="www.baidu.com" class="level-3th">
+                            上装</a><a href="www.baidu.com" class="level-3th">
+                            鞋类</a><a href="www.baidu.com" class="level-3th">
+                            内衣</a><a href="www.baidu.com" class="level-3th">
+                            袜子</a><a href="www.baidu.com" class="level-3th">
+                            孕婴童服装</a><a href="www.baidu.com" class="level-3th">
+                            运动服装</a><a href="www.baidu.com" class="level-3th">
+                            专业服饰
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>箱、包、盒</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">时尚休闲包</a><a href="www.baidu.com"
+                                                                                  class="level-3th">
+                            专用箱、包、盒</a><a href="www.baidu.com" class="level-3th">
+                            礼品盒</a><a href="www.baidu.com" class="level-3th">
+                            购物袋</a><a href="www.baidu.com" class="level-3th">
+                            功能箱包</a><a href="www.baidu.com" class="level-3th">
+                            旅行箱包</a><a href="www.baidu.com" class="level-3th">
+                            运动箱包
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>轻工日用品</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">美容、化妆用品</a><a
+                                href="www.baidu.com" class="level-3th">
+                            日化洗涤用品</a><a href="www.baidu.com" class="level-3th">
+                            卫浴清洁用具</a><a href="www.baidu.com" class="level-3th">
+                            厨房餐桌用品</a><a href="www.baidu.com" class="level-3th">
+                            卫生清洁用具</a><a href="www.baidu.com" class="level-3th">
+                            布艺、软装</a><a href="www.baidu.com" class="level-3th">
+                            床上用品</a><a href="www.baidu.com" class="level-3th">
+                            母婴用品</a><a href="www.baidu.com" class="level-3th">
+                            钟表</a><a href="www.baidu.com" class="level-3th">
+                            眼睛</a><a href="www.baidu.com" class="level-3th">
+                            烟具</a><a href="www.baidu.com" class="level-3th">
+                            日用杂品</a><a href="www.baidu.com" class="level-3th">
+                            宠物用品
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>家具</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">成套家具</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            办公家具</a><a href="www.baidu.com" class="level-3th">
+                            沙发</a><a href="www.baidu.com" class="level-3th">
+                            床</a><a href="www.baidu.com" class="level-3th">
+                            凳子</a><a href="www.baidu.com" class="level-3th">
+                            椅子</a><a href="www.baidu.com" class="level-3th">
+                            柜、橱</a><a href="www.baidu.com" class="level-3th">
+                            架子</a><a href="www.baidu.com" class="level-3th">
+                            台类家具</a><a href="www.baidu.com" class="level-3th">
+                            桌类家具
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>玩具</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">娃娃和玩偶</a><a href="www.baidu.com"
+                                                                                  class="level-3th">
+                            电动玩具</a><a href="www.baidu.com" class="level-3th">
+                            电子玩具</a><a href="www.baidu.com" class="level-3th">
+                            民俗玩具</a><a href="www.baidu.com" class="level-3th">
+                            充气玩具</a><a href="www.baidu.com" class="level-3th">
+                            体育、户外类玩具</a><a href="www.baidu.com" class="level-3th">
+                            益智和娱教玩具</a><a href="www.baidu.com" class="level-3th">
+                            模型类玩具</a><a href="www.baidu.com" class="level-3th">
+                            聚会玩具</a><a href="www.baidu.com" class="level-3th">
+                            婴幼儿玩具</a><a href="www.baidu.com" class="level-3th">
+                            成人玩具
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>工艺品</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">雕塑、雕刻</a><a href="www.baidu.com"
+                                                                                  class="level-3th">
+                            书画</a><a href="www.baidu.com" class="level-3th">
+                            装裱材料</a><a href="www.baidu.com" class="level-3th">
+                            相框、相册</a><a href="www.baidu.com" class="level-3th">
+                            民俗工艺品</a><a href="www.baidu.com" class="level-3th">
+                            祭祀宗教用品</a><a href="www.baidu.com" class="level-3th">
+                            收藏品及纪念品</a><a href="www.baidu.com" class="level-3th">
+                            首饰装饰</a><a href="www.baidu.com" class="level-3th">
+                            节庆、活动用品</a><a href="www.baidu.com" class="level-3th">
+                            书画耗材</a><a href="www.baidu.com" class="level-3th">
+                            雕刻、泥塑工具</a><a href="www.baidu.com" class="level-3th">
+                            雕刻、泥塑原料</a><a href="www.baidu.com" class="level-3th">
+                            工艺品制作材料</a><a href="www.baidu.com" class="level-3th">
+                            工艺品制作工具
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                    <dl data-index="7">
+                        <dt>电器</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">空调</a><a href="www.baidu.com"
+                                                                               class="level-3th">
+                            冰箱冷柜</a><a href="www.baidu.com" class="level-3th">
+                            电视机</a><a href="www.baidu.com" class="level-3th">
+                            家庭影院</a><a href="www.baidu.com" class="level-3th">
+                            厨房电器</a><a href="www.baidu.com" class="level-3th">
+                            洗衣机</a><a href="www.baidu.com" class="level-3th">
+                            干衣机</a><a href="www.baidu.com" class="level-3th">
+                            热水器</a><a href="www.baidu.com" class="level-3th">
+                            生活小电器</a><a href="www.baidu.com" class="level-3th">
+                            舞台设备</a><a href="www.baidu.com" class="level-3th">
+                            商业电器
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>计算机数码产品</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">蓝牙设备</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            数据线/连接线</a><a href="www.baidu.com" class="level-3th">
+                            网络设备</a><a href="www.baidu.com" class="level-3th">
+                            笔记本电脑</a><a href="www.baidu.com" class="level-3th">
+                            笔记本配套产品</a><a href="www.baidu.com" class="level-3th">
+                            显示器</a><a href="www.baidu.com" class="level-3th">
+                            多媒体音箱</a><a href="www.baidu.com" class="level-3th">
+                            移动存储器</a><a href="www.baidu.com" class="level-3th">
+                            摄影摄像设备</a><a href="www.baidu.com" class="level-3th">
+                            摄影摄像配套产品</a><a href="www.baidu.com" class="level-3th">
+                            手机及配件</a><a href="www.baidu.com" class="level-3th">
+                            手机配套产品</a><a href="www.baidu.com" class="level-3th">
+                            通讯设备</a><a href="www.baidu.com" class="level-3th">
+                            品牌电脑</a><a href="www.baidu.com" class="level-3th">
+                            电脑配件</a><a href="www.baidu.com" class="level-3th">
+                            电脑外设产品</a><a href="www.baidu.com" class="level-3th">
+                            服务器</a><a href="www.baidu.com" class="level-3th">
+                            电脑软件
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                    <dl data-index="8">
+                        <dt>办公用品</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">桌面文具</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            簿本册、证卡</a><a href="www.baidu.com" class="level-3th">
+                            办公耗材</a><a href="www.baidu.com" class="level-3th">
+                            办公设备</a><a href="www.baidu.com" class="level-3th">
+                            办公设备耗材</a><a href="www.baidu.com" class="level-3th">
+                            教学和演示用具</a><a href="www.baidu.com" class="level-3th">
+                            绘图用品</a><a href="www.baidu.com" class="level-3th">
+                            财会用品</a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                    <dl data-index="9">
+                        <dt>服务</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">广告、设计服务</a><a
+                                href="www.baidu.com" class="level-3th">
+                            工程、产品、工艺设计服务</a><a href="www.baidu.com" class="level-3th">
+                            金融、财务、保险服务</a><a href="www.baidu.com" class="level-3th">
+                            法律服务</a><a href="www.baidu.com" class="level-3th">
+                            商务、公关服务</a><a href="www.baidu.com" class="level-3th">
+                            教育和培训</a><a href="www.baidu.com" class="level-3th">
+                            进出口服务</a><a href="www.baidu.com" class="level-3th">
+                            国际物流服务</a><a href="www.baidu.com" class="level-3th">
+                            国内物流服务</a><a href="www.baidu.com" class="level-3th">
+                            租赁服务</a><a href="www.baidu.com" class="level-3th">
+                            加工服务</a><a href="www.baidu.com" class="level-3th">
+                            公共服务</a><a href="www.baidu.com" class="level-3th">
+                            维修与安装</a><a href="www.baidu.com" class="level-3th">
+                            婚礼、庆典服务</a><a href="www.baidu.com" class="level-3th">
+                            IT互联网服务</a><a href="www.baidu.com" class="level-3th">
+                            代理服务
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                        <dt>工程</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">建筑工程</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            路桥工程</a><a href="www.baidu.com" class="level-3th">
+                            城市建设工程</a><a href="www.baidu.com" class="level-3th">
+                            照明、亮化工程</a><a href="www.baidu.com" class="level-3th">
+                            园林、绿化工程</a><a href="www.baidu.com" class="level-3th">
+                            安装工程</a><a href="www.baidu.com" class="level-3th">
+                            工艺建造工程</a><a href="www.baidu.com" class="level-3th">
+                            电气工程</a><a href="www.baidu.com" class="level-3th">
+                            自动化控制仪表工程</a><a href="www.baidu.com" class="level-3th">
+                            通信工程</a><a href="www.baidu.com" class="level-3th">
+                            智能化工程</a><a href="www.baidu.com" class="level-3th">
+                            管道工程</a><a href="www.baidu.com" class="level-3th">
+                            防腐工程</a><a href="www.baidu.com" class="level-3th">
+                            保温工程</a><a href="www.baidu.com" class="level-3th">
+                            通风空调工程</a><a href="www.baidu.com" class="level-3th">
+                            消防人防工程</a><a href="www.baidu.com" class="level-3th">
+                            环保工程</a><a href="www.baidu.com" class="level-3th">
+                            信息化工程</a><a href="www.baidu.com" class="level-3th">
+                            设备运行保养工程</a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                    <dl data-index="10">
+                        <dt>食品饮料</dt>
+                        <dd><a href="www.baidu.com" class="level-3th">酒水饮料</a><a href="www.baidu.com"
+                                                                                 class="level-3th">
+                            调料</a><a href="www.baidu.com" class="level-3th">
+                            辅料</a><a href="www.baidu.com" class="level-3th">
+                            罐头</a><a href="www.baidu.com" class="level-3th">
+                            植物油</a><a href="www.baidu.com" class="level-3th">
+                            动物油</a><a href="www.baidu.com" class="level-3th">
+                            乳制品</a><a href="www.baidu.com" class="level-3th">
+                            豆制品</a><a href="www.baidu.com" class="level-3th">
+                            休闲食品
+
+                        </a>
+
+                            <div style="clear: both;"></div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+
+        var left_width = $(".level-1th").width();
+
+        $(".sub-container").css("left", left_width);
+
+        $(".sub-container").perfectScrollbar();
+
+        $.each(productCate, function (i, n) {
+            if (n.pid == 0) {
+                $(".level-1th").append('<a data-id="' + n.id + '" class="list-group-item">' + n.cname + '</a>');
+            }
+        });
+
+        $(".level-1th .list-group-item").hover(function () {
+            $(this).addClass('active').siblings('a').removeClass('active');
+
+            var pro_id = $(this).attr('data-id');
+            var sub_container = $(".sub-container");
+
+            sub_container.addClass('on');
+            sub_container.find('dl[data-index="'+ pro_id +'"]').show().siblings().hide();
+            sub_container.perfectScrollbar('update');
+        });
+
+        $(".row").on("mouseleave", function () {
+            $(".level-1th .list-group-item").removeClass('active');
+
+            var sub_container = $(".sub-container");
+            sub_container.find('dl').hide();
+            sub_container.removeClass('on');
+        });
+
+
+    });
+</script>
+</body>
+</html>

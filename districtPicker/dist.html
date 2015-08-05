@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is a Dist page</title>
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./distdata.js"></script>
+    <script src="./distpicker.js"></script>
+
+    <style>
+        #province {
+            width: 80px;
+        }
+
+        #city {
+            width: 80px;
+        }
+
+        #dist {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-sm-10" id="distpicker">
+    </div>
+    <script>
+        $(function() {
+            $('#distpicker').distpicker({
+                'data': distdata,
+                'p': 31,
+                'c': 376,
+                'd': 3135
+            });
+        });
+    </script>
+</body>
+</html>
